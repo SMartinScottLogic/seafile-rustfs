@@ -22,5 +22,19 @@ jobs:
            sudo apt-get install libfuse-dev
     - name: Build
       run: cargo build --verbose
+    - name: Build docs
+      run: cargo doc
     - name: Run tests
       run: cargo test --verbose
+    - name: Archive debug artifacts
+      uses: actions/upload-artifact@v2
+      with:
+          name: dist
+          path: |
+            target/debug
+    - name: Archive docs artifacts
+      uses: actions/upload-artifact@v2
+      with:
+          name: doc
+          path: |
+            target/doc
