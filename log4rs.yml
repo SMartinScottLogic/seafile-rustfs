@@ -1,0 +1,23 @@
+# Scan this file for changes every 30 seconds
+refresh_rate: 30 seconds
+
+appenders:
+  stdout:
+    kind: console
+      
+  seafile:
+    kind: file
+    path: "log/seafile.log"
+    
+
+root:
+  level: trace
+  appenders:
+    - seafile
+
+loggers:
+  seafile_rustfs:
+    level: debug
+    appenders:
+      - seafile
+    additive: false

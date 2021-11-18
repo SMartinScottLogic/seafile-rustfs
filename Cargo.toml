@@ -5,4 +5,47 @@ edition = "2021"
 
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 
-[dependencies]
+# A higher-level FUSE filesystem library with multi-threading and inode->path translation.
+[dependencies.fuse_mt]
+version = "0.5.1"
+
+# Raw FFI bindings to platform libraries like libc. 
+[dependencies.libc]
+version = "0.2.107"
+
+# Date and time library. Fully interoperable with the standard library. Mostly compatible with #![n…
+#[dependencies.time]
+#version = "0.3.5"
+
+# Utilities for working with time-related functions in Rust.
+[dependencies.time]
+version = "0.1.42"
+
+# A generic serialization/deserialization framework
+[dependencies.serde]
+version = "1.0.130"
+
+# A JSON serialization file format
+[dependencies.serde_json]
+version = "1.0.70"
+
+# higher level HTTP client library
+[dependencies.reqwest]
+version = "0.11.6"
+
+# A lightweight logging facade for Rust 
+[dependencies.log]
+version = "0.4.14"
+
+# A highly configurable multi-output logging implementation for the `log` facade
+[dependencies.log4rs]
+version = "1.0.0"
+
+# A simple to use, efficient, and full-featured Command Line Argument Parser
+[dependencies.clap]
+version = "~3.0.0-beta.5"
+
+# Flexible concrete Error type built on std::error::Error
+[dependencies.anyhow]
+version = "1.0.45"
+
